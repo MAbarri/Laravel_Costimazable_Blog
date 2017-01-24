@@ -2,12 +2,10 @@
 <script>
   fixNewLines = function(content)
     {
-      var codeBlocks=content.match(/&lt;code.*?&gt;[^]*?&lt;\/code&gt;/m)
-
-      if(codeBlocks == null) return content;
-      for(var index=0; index < codeBlocks.length; index++) {
-        content = content.replace(codeBlocks[index], codeBlocks[index].replace(/&lt;br\s*\/?&gt;/mgi, "\n"));
-      }
+      content = content.replace(/<br>/g, "");
+      content = content.replace(/&lt;/g, "<");
+      content = content.replace(/&gt;/g, ">");
+      content = content.replace(/&quot;/g, "\"");
       return content;
     }
     tinymce.init({

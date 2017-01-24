@@ -25,6 +25,7 @@ var elixir = require('laravel-elixir'),
     applicationCss = [
         'jquery-floating-social-share/dist/jquery.floating-social-share.min.css',
         'application.css'
+
     ],
     applicationJs = [
         'jquery/dist/jquery.min.js',
@@ -50,5 +51,9 @@ elixir(function(mix) {
         .less('application.less', bowerDir + 'application.css')
         .styles(applicationCss, 'public/css/application.css', bowerDir)
         .scripts(applicationJs, 'public/js/application.js', bowerDir)
-        .version(['css/admin.css', 'css/application.css', 'js/admin.js', 'js/application.js']);
+        .version(['css/admin.css', 'css/application.css', 'js/admin.js', 'js/application.js'])
+        .copy('resources/assets/css/sailor', 'public/css/sailor')
+        .copy('resources/assets/fonts/sailor/fontawesome-webfont.woff', 'public/css/fonts/fontawesome-webfont.woff')
+        .copy('resources/assets/fonts/sailor/fontawesome-webfont.ttf', 'public/css/fonts/fontawesome-webfont.ttf')
+        .copy('resources/assets/js/sailor', 'public/js/sailor');
 });
