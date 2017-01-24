@@ -2,6 +2,10 @@
 .phpstorm.meta.php
 composer.lock
 node_modules
+public/build
+public/css
+public/js
+public/packages
 resources/assets/vendor
 vendor
 _ide_helper.php
