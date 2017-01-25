@@ -201,7 +201,7 @@ header .top ul.social-network li a {
 	border: none;
 	outline: none;
 	background: #fff;
-	width: 50%;
+	width: 100%;
 	height: 36px;
 	margin: 0;
 	z-index: 10;
@@ -276,7 +276,7 @@ header .top ul.social-network li a {
 /* Open state */
 .sb-search.sb-search-open,
 .no-js .sb-search {
-	width: 80%;
+	width: 40%;
 }
 
 .sb-search.sb-search-open .sb-icon-search,
@@ -2158,6 +2158,10 @@ article img.pull-right, article .align-right{
 
 @media (max-width: 767px) {
 
+	.sb-search.sb-search-open,
+	.no-js .sb-search {
+		width: 50% !important;
+	}
   body {
     padding-right: 0;
     padding-left: 0;
@@ -2595,4 +2599,36 @@ a.btn.btn-wide {
 	margin-right: 60px;
 }
 
+.social-media-costume-menu{
+	padding: 6px 15px;
+	float: right;
+}
+.social-media-costume-menu:hover,
+.social-media-costume-menu:focus {
+	    -webkit-transition: all .3s ease;
+	    -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	    -o-transition: all .3s ease;
+	    transition: all .3s ease;
+}
+
+.social-media-costume-menu:hover,
+.social-media-costume-menu:focus {
+  background-color: #e2e2e2;
+}
+.sb-search-beside-social-media{
+	margin: 0px 10px;
+}
+.text-bold{
+	    font-weight: bold;
+}
+.phone-number-margin{
+	margin: 6px 0px;
+}
+
+@media (max-width: 767px) {
+.flex-caption-mobile{
+	position: static; margin: auto;
+}
+}
 /* Theme Styler :: End */

@@ -1,29 +1,27 @@
 <!-- start header -->
 	<header>
-			<div class="top">
+			<div class="top only-large-screen">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-4">
-							<ul class="topleft-info">
-								<li>
-									<!-- <a href="{{  route('root') }}">{{ Session::get('current_lang')->site_title }}  </a> -->
-									<i class="fa fa-phone"></i>
-                 {{ Config::get('settings')->phoneNumber }}</li>
-							</ul>
+						<div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
+							<div class="text-bold phone-number-margin">
+								<!-- <a href="{{  route('root') }}">{{ Session::get('current_lang')->site_title }}  </a> -->
+								<i class="fa fa-phone"></i>
+								{{ Config::get('settings')->phoneNumber }}
+							</div>
 						</div>
-						<div class="col-md-8">
-              <ul class="nav navbar-nav navbar-right disable-navbar-paddings">
+						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+
                 @if(!empty(Config::get('settings')->facebook))
-                <li><a target="_blank" href="{{ Config::get('settings')->facebook }}"><i class="fa fa-facebook"></i></a></li>
+                <a class="social-media-costume-menu" target="_blank" href="{{ Config::get('settings')->facebook }}"><i class="fa fa-facebook"></i></a>
                 @endif
                 @if(!empty(Config::get('settings')->twitter))
-                <li><a target="_blank" href="{{ Config::get('settings')->twitter }}"><i class="fa fa-twitter"></i></a></li>
+                <a class="social-media-costume-menu" target="_blank" href="{{ Config::get('settings')->twitter }}"><i class="fa fa-twitter"></i></a>
                 @endif
                 @if(!empty(Config::get('settings')->email))
-                <li><a target="_blank" href="mailto:{{ Config::get('settings')->email }}"><i class="fa fa-envelope"></i></a></li>
+                <a class="social-media-costume-menu" target="_blank" href="mailto:{{ Config::get('settings')->email }}"><i class="fa fa-envelope"></i></a>
                 @endif
-              </ul>
-						<div id="sb-search" class="sb-search">
+						<div id="sb-search" class="sb-search sb-search-beside-social-media">
 							<form>
 								<input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search">
 								<input class="sb-search-submit" type="submit" value="">
@@ -32,6 +30,7 @@
 						</div>
 
 
+						</div>
 						</div>
 					</div>
 				</div>

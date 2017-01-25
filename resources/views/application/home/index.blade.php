@@ -13,7 +13,7 @@
         			@foreach($slides as $slide)
               <li>
                 <img src="{{ $slide->image }}" alt="{{ $slide->title }}" />
-                <div class="flex-caption">
+                <div class="flex-caption flex-caption-mobile">
                     <h3>{{ $slide->title }}</h3>
 					          <p>{{ $slide->description }}</p>
 					          <a href="#" class="btn btn-theme">Learn More</a>
