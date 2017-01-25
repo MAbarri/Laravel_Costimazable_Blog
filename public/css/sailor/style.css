@@ -2158,6 +2158,10 @@ article img.pull-right, article .align-right{
 
 @media (max-width: 767px) {
 
+		.flex-caption-mobile{
+			position: static !important;
+			margin: auto !important;
+		}
 	.sb-search.sb-search-open,
 	.no-js .sb-search {
 		width: 50% !important;
@@ -2626,9 +2630,4 @@ a.btn.btn-wide {
 	margin: 6px 0px;
 }
 
-@media (max-width: 767px) {
-.flex-caption-mobile{
-	position: static; margin: auto;
-}
-}
 /* Theme Styler :: End */

@@ -34,7 +34,6 @@
 						</div>
 					</div>
 				</div>
-			</div>
           @include('partials.menu.application')
 	</header>
 	<!-- end header -->
