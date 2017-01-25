@@ -2157,6 +2157,7 @@ article img.pull-right, article .align-right{
 }
 
 @media (max-width: 767px) {
+
 	.sb-search.sb-search-open,
 	.no-js .sb-search {
 		width: 50% !important;
@@ -2597,6 +2598,7 @@ a.btn.btn-wide {
 .languages-menu-pos{
 	margin-right: 60px;
 }
+
 .social-media-costume-menu{
 	padding: 6px 15px;
 	float: right;
@@ -2626,8 +2628,7 @@ a.btn.btn-wide {
 
 @media (max-width: 767px) {
 .flex-caption-mobile{
-	position: static !important;
-	margin: auto !important;
+	position: static; margin: auto;
 }
 }
 /* Theme Styler :: End */
