@@ -12,6 +12,7 @@
 */
 
 Route::get('/', ['as' => 'root', 'uses' => 'HomeController@index']);
+Route::get('search', 'SearchController@index');
 Route::get('article/{article_slug}', ['as' => 'article', 'uses' => 'ArticleController@index']);
 Route::get('page/{page_slug}', ['as' => 'page', 'uses' => 'PageController@index']);
 Route::get('category/{category_slug}', ['as' => 'category', 'uses' => 'CategoryController@index']);

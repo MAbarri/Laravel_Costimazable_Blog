@@ -1,5 +1,5 @@
 @if(count($languages))
-<div class="dropdown">
+<div id="sidebar_filter_areas" class="dropdown">
   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
     {{ trans('application.select_lang') }}
     <span class="caret"></span>

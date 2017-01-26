@@ -2157,7 +2157,9 @@ article img.pull-right, article .align-right{
 }
 
 @media (max-width: 767px) {
-
+	.mobile-text-right{
+		text-align: right;
+	}
 		.flex-caption-mobile{
 			position: static !important;
 			margin: auto !important;

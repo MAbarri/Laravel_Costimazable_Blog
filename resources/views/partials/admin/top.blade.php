@@ -11,7 +11,7 @@
                         <img class="user-image img-circle" src="{{ Auth::user()->picture }}" alt="{{ Auth::user()->name }}" />
                         <span class="hidden-xs">{{ Auth::user()->name  }}</span>
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul id="myDropdown" class="dropdown-menu">
                         <li class="user-header">
                             <img class="img-circle" src="{{ Auth::user()->picture }}" alt="{{ Auth::user()->name }}" />
                             <p>{{ Auth::user()->name  }}</p>
