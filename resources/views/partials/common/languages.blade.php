@@ -15,15 +15,3 @@
             {!! Form::hidden('language') !!}
         {!! Form::close() !!}
 @endif
-<script type="text/javascript">
-
-$('.dropdown-menu').on('click', function(e) {
-  e.stopPropagation();
-});
-$('#dropdownMenu1').on('click', function(e) {
-  if(!$('#sidebar_filter_areas').hasClass( "open" )){
-  $('#sidebar_filter_areas').addClass('open');} else {
-    $('#sidebar_filter_areas').removeClass('open');
-  }
-});
-</script>
