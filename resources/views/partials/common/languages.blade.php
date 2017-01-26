@@ -1,5 +1,5 @@
 @if(count($languages))
-<div class="dropdown">
+<div id="sidebar_filter_areas" class="dropdown">
   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
     {{ trans('application.select_lang') }}
     <span class="caret"></span>
@@ -15,3 +15,15 @@
             {!! Form::hidden('language') !!}
         {!! Form::close() !!}
 @endif
+<script type="text/javascript">
+
+$('.dropdown-menu').on('click', function(e) {
+  e.stopPropagation();
+});
+$('#dropdownMenu1').on('click', function(e) {
+  if(!$('#sidebar_filter_areas').hasClass( "open" )){
+  $('#sidebar_filter_areas').addClass('open');} else {
+    $('#sidebar_filter_areas').removeClass('open');
+  }
+});
+</script>
