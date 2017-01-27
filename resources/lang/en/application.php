@@ -19,6 +19,10 @@ return [
     "copyright"=>"Abarri 2017 - All Right Reserved",
     "copyright1"=>"Developed by ",
     "copyright2"=>"Abarri",
-    "pages"=>"Pages"
+    "pages"=>"Pages",
+    "subscribe_success"=>"Success!",
+    "subscribe_success_msg"=>" Email subscribed successfully.",
+    "subscribe_fail"=>"Error!",
+    "subscribe_fail_msg"=>"  Already Subscribed."
 
 ];

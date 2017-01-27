@@ -61,7 +61,7 @@
 					<h5 class="widgetheading">Popular Searchs</h5>
 					<ul class="tags">
 							@foreach($popularSeaches as $oneSearch)
-							<li><a href="#">{{ $oneSearch->value }}</a></li>
+							<li><a href="/search?search={{ $oneSearch->value }}">{{ $oneSearch->value }}</a></li>
 							@endforeach
 					</ul>
 				</div>

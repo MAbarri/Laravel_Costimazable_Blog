@@ -65,6 +65,9 @@ return [
           "language_id" => "Language",
           "title"       => "Title"
       ],
+      "subscriber" => [
+        "email"         => "Email"
+      ],
         "slide" => [
             "description"     => "Description",
             "language_id" => "Language",
@@ -193,6 +196,7 @@ return [
             "root"                  => "Pages"
         ],
         "setting"                   => "Settings",
+        "subscribers"               => "Subscribers",
         "user" => [
             "add"                   => "Add a User",
             "all"                   => "All Users",
@@ -219,6 +223,9 @@ return [
     "root"                          => "Dashboard",
     "setting" => [
         "index"                     => "Settings"
+    ],
+    "subscribers" => [
+        "index"                     => "Subscribers"
     ],
     "submit"                        => "Submit",
     "title"                         => "Control Panel",
