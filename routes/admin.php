@@ -9,6 +9,10 @@ Route::resource('article', 'ArticleController');
 Route::resource('category', 'CategoryController');
 Route::resource('language', 'LanguageController');
 Route::resource('page', 'PageController');
+Route::resource('subscribers', 'SubscriberController');
+Route::get('subscribers/create', function($user_path) {
+    return redirect('subscribers' . $user_path);
+});
 Route::resource('user', 'UserController');
 Route::resource('slide', 'SlideController');
 Route::resource('home_section', 'HomeSectionController');

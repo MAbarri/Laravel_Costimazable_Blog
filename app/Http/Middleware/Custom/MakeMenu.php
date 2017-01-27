@@ -114,6 +114,9 @@ class MakeMenu
                 ->icon($this->circle)
                 ->prependIcon();
 
+            $menu->add($this->translate('subscribers'), ['route' => 'admin.subscribers.index'])
+                ->icon('envelope')
+                ->prependIcon();
             $menu->add($this->translate('setting'), ['route' => 'admin.setting.index'])
                 ->icon('gears')
                 ->prependIcon();

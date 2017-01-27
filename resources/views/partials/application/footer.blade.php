@@ -31,12 +31,26 @@
       <div class="widget">
         <h4>{{ trans('application.newsletter_title') }}</h4>
         <p>{{ trans('application.newsletter_description') }}</p>
+        <form class="" action="/subscribe" method="post">
                   <div class="form-group multiple-form-group input-group">
+                      <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                       <input type="email" name="email" class="form-control">
                       <span class="input-group-btn">
-                          <button type="button" class="btn btn-theme btn-add">{{ trans('application.newsletter_subscribe') }}</button>
+                          <button type="submit" class="btn btn-theme btn-add">{{ trans('application.newsletter_subscribe') }}</button>
                       </span>
                   </div>
+        </form>
+        @if ($errors->any())
+          @if ( $errors->first() == "success")
+            <div class="alert alert-success">
+							<strong> {{ trans('application.subscribe_success') }} </strong>{{ trans('application.subscribe_success_msg') }}
+						</div>
+            @elseif ( $errors->first() == "exists")
+            <div class="alert alert-danger">
+							<strong>{{ trans('application.subscribe_fail') }}</strong>{{ trans('application.subscribe_fail_msg') }}
+						</div>
+            @endif
+        @endif
       </div>
 
       <p><strong>{{ trans('application.language') }}</strong>
