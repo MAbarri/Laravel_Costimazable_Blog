@@ -4,7 +4,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
-							<div class="text-bold phone-number-margin mobile-text-right">
+							<div class="text-bold phone-number-margin hidden-xs">
 								<!-- <a href="{{  route('root') }}">{{ Session::get('current_lang')->site_title }}  </a> -->
 								<i class="fa fa-phone"></i>
 								{{ Config::get('settings')->phoneNumber }}
