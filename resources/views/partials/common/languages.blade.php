@@ -4,7 +4,7 @@
     {{ trans('application.select_lang') }}
     <span class="caret"></span>
   </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+  <ul class="dropdown-menu mobile-keep-background" aria-labelledby="dropdownMenu1">
       @foreach($languages as $lang)
     <li class="chosen-one" ><a href="#"><img id="lang_{{ $lang->code }}" height="20" alt="{{ $lang->code }}" src="{{ asset($lang->flag) }}" value="{{ $lang->code }}" />
       {{ $lang->title }}</img></a></li>
