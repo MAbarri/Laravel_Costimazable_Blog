@@ -11,6 +11,15 @@ class PageRequest extends Request
      *
      * @return array
      */
+    public function all()
+    {
+        $data = parent::all();
+        $data['active'] = $this->input('active', "0");
+        $data['isHTMLPage'] = $this->input('isHTMLPage', "0");
+        $data['parent_id'] = $this->input('parent_id') == "" ? null : $this->input('parent_id');
+      return $data;
+    }
+
     public function rules()
     {
         return [

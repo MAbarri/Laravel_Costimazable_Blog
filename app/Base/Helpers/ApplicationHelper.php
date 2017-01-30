@@ -30,21 +30,36 @@ if (!function_exists('renderMenuNode')) {
     {
         $list = 'class="dropdown-menu"';
         $class = 'class="dropdown"';
-        $caret = '<i class="fa fa-caret-down"></i>';
+        $subMenuClass = 'class="dropdown-submenu"';
+        $caret = '<i class="fa fa-angle-down"></i></a>';
         $link = route('page', ['page_slug' => $node->slug]);
         $drop_down = '<a class="dropdown-toggle" data-toggle="dropdown" href="'.$link.'"
-                        role="button" aria-expanded="false">' . $node->title . ' ' . $caret . '</a>';
+                        data-delay="0" data-close-others="false" >' . $node->title . ' ' . $caret . '</a>';
+        $sub_drop_down = '<a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown">'
+                          . $node->title . '</a>';
         $single  = '<a href="'. $link .'">' . $node->title . '</a>';
+
         if ($node->isLeaf()) {
             return '<li>' . $single . '</li>';
         } else {
-            $html = '<li '.$class.'>' . $drop_down;
+          if($node->parent) {
+            $html = '<li '.$subMenuClass.'>' . $sub_drop_down;
             $html .= '<ul '.$list.'>';
             foreach ($node->children as $child) {
-                $html .= renderMenuNode($child);
+              $html .= renderMenuNode($child);
             }
             $html .= '</ul>';
             $html .= '</li>';
+          }
+          else {
+            $html = '<li '.$class.'>' . $drop_down;
+            $html .= '<ul '.$list.'>';
+            foreach ($node->children as $child) {
+              $html .= renderMenuNode($child);
+            }
+            $html .= '</ul>';
+            $html .= '</li>';
+          }
         }
         return $html;
     }

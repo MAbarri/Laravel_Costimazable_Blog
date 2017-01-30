@@ -123,6 +123,7 @@ return [
             "content"               => "Content",
             "description"           => "Description",
             "language_id"           => "Language",
+            "parent_id"             => "Parent Page (dropdown)",
             "title"                 => "Title",
             "isHTMLPage"            => "HTML code",
             "isNotHTMLPage"         => "Only text",

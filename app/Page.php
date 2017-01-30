@@ -50,7 +50,7 @@ class Page extends Node
     /**
      * @var array
      */
-    protected $fillable = ['content', 'description', 'language_id', 'title', 'isHTMLPage','active'];
+    protected $fillable = ['content', 'description', 'language_id', 'parent_id', 'title', 'isHTMLPage','active'];
 
     /**
      * @return array
@@ -70,5 +70,13 @@ class Page extends Node
     public function language()
     {
         return $this->belongsTo(Language::class);
+    }
+    public function parentPage()
+    {
+        return $this->belongsTo(Page::class);
+    }
+    public function childrenPages()
+    {
+        return $this->hasMany(Page::class);
     }
 }

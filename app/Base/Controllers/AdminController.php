@@ -3,6 +3,7 @@
 namespace App\Base\Controllers;
 
 use App\Language;
+use App\Page;
 use App\Http\Controllers\Controller;
 use FormBuilder;
 use Laracasts\Flash\Flash;
@@ -245,7 +246,10 @@ abstract class AdminController extends Controller
      */
     protected function getSelectList()
     {
-        return Language::pluck('title', 'id')->all();
+        $lists = array();
+        $lists['languages']=Language::pluck('title', 'id')->all();
+        $lists['pages']=array( null =>'Choose a parent Page, leave first choice if It\'s a Parent Page ') + Page::pluck('title', 'id')->all();
+        return $lists;
     }
 
     /**

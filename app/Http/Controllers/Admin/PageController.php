@@ -6,7 +6,6 @@ use App\Base\Controllers\AdminController;
 use App\Http\Requests\Admin\PageRequest;
 use App\Page;
 use Illuminate\Http\Request;
-use Log;
 
 class PageController extends AdminController
 {
@@ -64,9 +63,6 @@ class PageController extends AdminController
      */
     public function update(Page $page, PageRequest $request)
     {
-
-        $page->active = $request->input('active', 0);
-        $page->isHTMLPage = $request->input('isHTMLPage', 0);
         return $this->saveFlashRedirect($page, $request);
     }
 
