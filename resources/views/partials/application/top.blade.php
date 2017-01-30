@@ -23,7 +23,7 @@
                 @endif
 						<div id="sb-search" class="sb-search sb-search-beside-social-media">
 							<form action="/search">
-								<input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search">
+								<input class="sb-search-input" placeholder="Search..." type="text" value="" name="search" id="search">
 								<input class="sb-search-submit" type="submit" value="">
 								<span class="sb-icon-search" title="Click to start searching"></span>
 							</form>

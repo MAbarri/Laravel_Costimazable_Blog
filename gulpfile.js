@@ -55,5 +55,7 @@ elixir(function(mix) {
         .copy('resources/assets/css/sailor', 'public/css/sailor')
         .copy('resources/assets/fonts/sailor/fontawesome-webfont.woff', 'public/css/fonts/fontawesome-webfont.woff')
         .copy('resources/assets/fonts/sailor/fontawesome-webfont.ttf', 'public/css/fonts/fontawesome-webfont.ttf')
-        .copy('resources/assets/js/sailor', 'public/js/sailor');
+        .copy('resources/assets/js/sailor', 'public/js/sailor')
+        .copy(bowerDir + 'bootstrap-toggle/css/bootstrap-toggle.min.css', 'public/css/bootstrap-toggle.min.css')
+        .copy(bowerDir + 'bootstrap-toggle/js/bootstrap-toggle.min.js', 'public/js/bootstrap-toggle.min.js');
 });

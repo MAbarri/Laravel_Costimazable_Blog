@@ -123,9 +123,12 @@ return [
             "content"               => "Content",
             "description"           => "Description",
             "language_id"           => "Language",
+            "parent_id"             => "Parent Page (dropdown)",
             "title"                 => "Title",
-            "isHTMLPage"            => "HTML Content",
-            "active"                => "Active page"
+            "isHTMLPage"            => "HTML code",
+            "isNotHTMLPage"         => "Only text",
+            "active"                => "Show page",
+            "notActive"             => "Hide page"
         ],
         "published_at"              => "Published at",
         "read_count"                => "Read Count",

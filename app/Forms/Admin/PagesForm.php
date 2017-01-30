@@ -10,17 +10,29 @@ class PagesForm extends AdminForm
     {
         $this
             ->add('language_id', 'choice', [
-                'choices' => $this->data,
+                'choices' => $this->data['languages'],
                 'label' => trans('admin.fields.page.language_id')
+            ])
+            ->add('parent_id', 'choice', [
+                'choices' => $this->data['pages'],
+                'label' => trans('admin.fields.page.parent_id')
             ])
             ->add('title', 'text', [
                 'label' => trans('admin.fields.page.title')
             ])
             ->add('active', 'checkbox', [
-              'label' => trans('admin.fields.page.active')
+              'label_show'=> false,
+              'attr' => [
+                    'data-toggle' => 'toggle',
+                    'data-on' => trans('admin.fields.page.active'),
+                    'data-off' => trans('admin.fields.page.notActive')]
             ])
             ->add('isHTMLPage', 'checkbox', [
-                'label' => trans('admin.fields.page.isHTMLPage')
+              'label_show'=> false,
+              'attr' => [
+                    'data-toggle' => 'toggle',
+                    'data-on' => trans('admin.fields.page.isHTMLPage'),
+                    'data-off' => trans('admin.fields.page.isNotHTMLPage')]
             ])
             ->add('content', 'textarea', [
                 'label' => trans('admin.fields.page.content')
