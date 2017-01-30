@@ -9141,6 +9141,10 @@ ul.languages li img {
     color: black !important;
   }
 }
+.toggle {
+  margin-bottom: 9px !important;
+  margin-right: 9px !important;
+}
 
 /*# sourceMappingURL=admin.css.map */
 

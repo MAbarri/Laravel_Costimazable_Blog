@@ -17,10 +17,18 @@ class PagesForm extends AdminForm
                 'label' => trans('admin.fields.page.title')
             ])
             ->add('active', 'checkbox', [
-              'label' => trans('admin.fields.page.active')
+              'label_show'=> false,
+              'attr' => [
+                    'data-toggle' => 'toggle',
+                    'data-on' => trans('admin.fields.page.active'),
+                    'data-off' => trans('admin.fields.page.notActive')]
             ])
             ->add('isHTMLPage', 'checkbox', [
-                'label' => trans('admin.fields.page.isHTMLPage')
+              'label_show'=> false,
+              'attr' => [
+                    'data-toggle' => 'toggle',
+                    'data-on' => trans('admin.fields.page.isHTMLPage'),
+                    'data-off' => trans('admin.fields.page.isNotHTMLPage')]
             ])
             ->add('content', 'textarea', [
                 'label' => trans('admin.fields.page.content')

@@ -124,8 +124,10 @@ return [
             "description"           => "Description",
             "language_id"           => "Language",
             "title"                 => "Title",
-            "isHTMLPage"            => "HTML Content",
-            "active"                => "Active page"
+            "isHTMLPage"            => "HTML code",
+            "isNotHTMLPage"         => "Only text",
+            "active"                => "Show page",
+            "notActive"             => "Hide page"
         ],
         "published_at"              => "Published at",
         "read_count"                => "Read Count",
