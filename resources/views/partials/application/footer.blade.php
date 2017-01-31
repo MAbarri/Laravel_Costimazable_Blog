@@ -13,7 +13,7 @@
         </p>
       </div>
     </div>
-    <div class="col-sm-4 col-lg-4">
+    <div class="col-sm-4 col-lg-4 hidden-xs">
       <div class="widget">
         <h4>{{ trans('application.pages') }}</h4>
         <ul class="link-list">

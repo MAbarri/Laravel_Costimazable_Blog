@@ -3,8 +3,8 @@ jQuery(document).ready(function($) {
 "use strict";
 
 function fixNavbarOnMobile (){
-    if(!$( ".dropdown" ).hasClass( "open" )){
-      $('.dropdown-menu').addClass( "hidden-xs" );
+    if(!$( "header .dropdown" ).hasClass( "open" )){
+      $('header .dropdown-menu').addClass( "hidden-xs" );
     }
     $('.navbar-toggle').on('click', function(){
       $('.dropdown-menu').addClass('hidden-xs');
