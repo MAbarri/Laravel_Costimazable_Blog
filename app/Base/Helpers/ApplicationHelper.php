@@ -36,7 +36,7 @@ if (!function_exists('renderMenuNode')) {
         $drop_down = '<a class="dropdown-toggle" data-toggle="dropdown" href="'.$link.'"
                         data-delay="0" data-close-others="false" >' . $node->title . ' ' . $caret . '</a>';
         $sub_drop_down = '<a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown">'
-                          . $node->title . '</a>';
+                          . $node->title . '&nbsp;</a>';
         $single  = '<a href="'. $link .'">' . $node->title . '</a>';
 
         if ($node->isLeaf()) {
