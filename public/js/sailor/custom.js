@@ -9,8 +9,12 @@ function fixNavbarOnMobile (){
     $('.navbar-toggle').on('click', function(){
       $('.dropdown-menu').addClass('hidden-xs');
     })
+    $('.navbar-mobile-link-hide').on('click', function(){
+      var $this = $(this)
+      $this.parents('.dropdown-menu').addClass('hidden-xs');
+    })
     $('.dropdown .dropdown-toggle').on('click', function(e) {
-      var $this   = $(this)
+      var $this = $(this)
       if($this.is('a')){
         $this = $this.parent('li');
       }
