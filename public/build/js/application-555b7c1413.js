@@ -56,6 +56,11 @@ $(function() {
         $('input[name="language"]').val($(this).attr("alt"));
         $('#anakin-skywalker').submit();
     });
+    $(window).resize(function(){
+	      if ($(window).width() <= 767){
+		    alert('hohoho')
+	   }
+    });
 });
 
 //# sourceMappingURL=application.js.map

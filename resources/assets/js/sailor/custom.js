@@ -3,6 +3,45 @@ jQuery(document).ready(function($) {
 "use strict";
 
 
+function fixNavbarOnMobile (){
+    if(!$( ".dropdown" ).hasClass( "open" )){
+      $('.dropdown-menu').addClass( "hidden-xs" );
+    }
+    $('.dropdown .dropdown-toggle').on('click', function(e) {
+      var $this   = $(this)
+      if($this.is('a')){
+        $this = $this.parent('li');
+      }
+      if(!$this.hasClass('dropdown-submenu')){
+        if($this.hasClass( "open" )){
+          $this.children('.dropdown-menu').addClass( "hidden-xs" );
+        } else {
+          if($this.children('.dropdown-menu').hasClass( "hidden-xs" ))
+              $this.children('.dropdown-menu').removeClass( "hidden-xs" );
+        }
+      } else {
+        if($this.hasClass( "open" )){
+          $this.removeClass("open");
+          $this.children('.dropdown-menu').addClass( "hidden-xs" );
+        } else {
+          $this.addClass("open");
+            if($this.children('.dropdown-menu').hasClass( "hidden-xs" ))
+                $this.children('.dropdown-menu').removeClass( "hidden-xs" );
+        }
+        e.stopPropagation();
+      }
+    });
+}
+
+  $(window).resize(function(){
+    if ($(window).width() <= 767){
+      fixNavbarOnMobile();
+    }
+  });
+  if ($(window).width() <= 767){
+    fixNavbarOnMobile();
+  }
+
     $('li.chosen-one').click(function(){
         $('input[name="language"]').val($(this.childNodes[0].firstChild).attr("alt"));
         $('#language-form-changer').submit();
