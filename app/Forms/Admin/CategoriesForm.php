@@ -10,7 +10,7 @@ class CategoriesForm extends AdminForm
     {
         $this
             ->add('language_id', 'choice', [
-                'choices' => $this->data,
+                'choices' => $this->data['languages'],
                 'label' => trans('admin.fields.category.language_id')
             ])
             ->add('title', 'text', [

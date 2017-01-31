@@ -2631,4 +2631,7 @@ a.btn.btn-wide {
 .phone-number-margin{
 	margin: 6px 0px;
 }
+.display-inline{
+	display:inline;
+}
 /* Theme Styler :: End */

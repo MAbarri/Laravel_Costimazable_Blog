@@ -19,7 +19,7 @@ class SlideDataTable extends DataTableController
      */
     protected $image_columns = ['image'];
 
-    protected $columns = ['title','description'];
+    protected $columns = ['title','description','link'];
 
     /**
      * Common columns for translation
