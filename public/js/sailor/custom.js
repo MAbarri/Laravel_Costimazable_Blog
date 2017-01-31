@@ -7,8 +7,8 @@ function fixNavbarOnMobile (){
     if(!$( "header .dropdown" ).hasClass( "open" )){
       $('header .dropdown-menu').addClass( "hidden-xs" );
     }
-    $('.navbar-toggle').on('click', function(){
-      $('.dropdown-menu').addClass('hidden-xs');
+    $('header .navbar-toggle').on('click', function(){
+      $('header .dropdown-menu').addClass('hidden-xs');
     })
     $('.navbar-mobile-link-hide').on('click', function(){
       var $this = $(this)
