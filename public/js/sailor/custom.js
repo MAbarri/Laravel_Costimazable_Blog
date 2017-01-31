@@ -2,6 +2,7 @@
 jQuery(document).ready(function($) {
 "use strict";
 
+
 function fixNavbarOnMobile (){
     if(!$( ".dropdown" ).hasClass( "open" )){
       $('.dropdown-menu').addClass( "hidden-xs" );
@@ -40,6 +41,7 @@ function fixNavbarOnMobile (){
   if ($(window).width() <= 767){
     fixNavbarOnMobile();
   }
+
     $('li.chosen-one').click(function(){
         $('input[name="language"]').val($(this.childNodes[0].firstChild).attr("alt"));
         $('#language-form-changer').submit();
