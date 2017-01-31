@@ -72,6 +72,7 @@ return [
             "description"     => "Description",
             "language_id" => "Language",
             "title"       => "Title",
+            "link"        => "Link to Article",
             "image"       => "Image URL"
         ],
         "article" => [

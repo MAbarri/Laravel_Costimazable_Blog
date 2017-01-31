@@ -6,7 +6,7 @@ use App\Base\SluggableModel;
 
 class Slide extends SluggableModel
 {
-  protected $fillable = ['description', 'language_id', 'title', 'image'];
+  protected $fillable = ['description', 'language_id', 'title', 'image', 'link'];
 
   public function language()
   {

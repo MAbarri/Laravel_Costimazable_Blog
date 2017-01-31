@@ -10,11 +10,14 @@ class SlidesForm extends AdminForm
     {
         $this
             ->add('language_id', 'choice', [
-                'choices' => $this->data,
+                'choices' => $this->data['languages'],
                 'label' => trans('admin.fields.slide.language_id')
             ])
             ->add('title', 'text', [
                 'label' => trans('admin.fields.slide.title')
+            ])
+            ->add('link', 'text', [
+                'label' => trans('admin.fields.slide.link')
             ])
             ->add('description', 'textarea', [
                 'label' => trans('admin.fields.slide.description')

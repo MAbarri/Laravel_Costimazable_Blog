@@ -9,4 +9,5 @@
     </div>
     <p>{!! $object->description !!}</p>
     <p>{!! $object->image !!}</p>
+    <p>{!! $object->link !!}</p>
 @endsection

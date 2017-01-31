@@ -10,6 +10,7 @@ class SlideRequest extends Request
     {
         return [
             'description' => 'required',
+            'link' => 'sometimes',
             'image'   => 'sometimes|max:2048|image',
             'language_id' => 'required|integer',
             'title' => 'required|min:3'

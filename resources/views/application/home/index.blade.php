@@ -16,7 +16,7 @@
                 <div class="flex-caption flex-caption-mobile">
                     <h3>{{ $slide->title }}</h3>
 					          <p>{{ $slide->description }}</p>
-					          <a href="#" class="btn btn-theme">Learn More</a>
+					          <a href="{{ $slide->link }}" class="btn btn-theme">Learn More</a>
                 </div>
               </li>
         			@endforeach
