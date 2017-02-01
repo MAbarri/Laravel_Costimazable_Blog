@@ -246,10 +246,7 @@ abstract class AdminController extends Controller
      */
     protected function getSelectList()
     {
-        $lists = array();
-        $lists['languages']=Language::pluck('title', 'id')->all();
-        $lists['pages']=array( null =>'Choose a parent Page, leave first choice if It\'s a Parent Page ') + Page::pluck('title', 'id')->all();
-        return $lists;
+        return Language::pluck('title', 'id')->all();
     }
 
     /**

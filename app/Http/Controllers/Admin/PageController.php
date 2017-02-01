@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Base\Controllers\AdminController;
 use App\Http\Requests\Admin\PageRequest;
 use App\Page;
+use Input;
 use Illuminate\Http\Request;
 
 class PageController extends AdminController
@@ -63,10 +64,6 @@ class PageController extends AdminController
      */
     public function update(Page $page, PageRequest $request)
     {
-      $children = Page::where('parent_id', '=',$page->id);
-      if(count($children)>0){
-        return $this->redirectRoutePath('index', 'admin.page_parent_error');
-      }
         return $this->saveFlashRedirect($page, $request);
     }
 

@@ -10,7 +10,7 @@ class HomeSectionsForm extends AdminForm
     {
         $this
             ->add('language_id', 'choice', [
-                'choices' => $this->data['languages'],
+                'choices' => $this->data,
                 'label' => trans('admin.fields.home_section.language_id')
             ])
             ->add('title', 'text', [

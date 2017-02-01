@@ -16,7 +16,7 @@ class ArticlesForm extends AdminForm
                 'label' => trans('admin.fields.article.title')
             ])
             ->add('category_id', 'choice', [
-                'choices' => $this->data['languages'],
+                'choices' => $this->data,
                 'label' => trans('admin.fields.article.category_id')
             ])
             ->add('content', 'textarea', [
