@@ -63,6 +63,10 @@ class PageController extends AdminController
      */
     public function update(Page $page, PageRequest $request)
     {
+      $children = Page::where('parent_id', '=',$page->id);
+      if(count($children)>0){
+        return $this->redirectRoutePath('index', 'admin.page_parent_error');
+      }
         return $this->saveFlashRedirect($page, $request);
     }
 

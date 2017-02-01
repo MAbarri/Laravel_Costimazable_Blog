@@ -19,12 +19,12 @@ class Handler extends ExceptionHandler
      * @var array
      */
     protected $dontReport = [
-        // AuthenticationException::class,
-        // AuthorizationException::class,
-        // HttpException::class,
-        // ModelNotFoundException::class,
-        // TokenMismatchException::class,
-        // ValidationException::class,
+        AuthenticationException::class,
+        AuthorizationException::class,
+        HttpException::class,
+        ModelNotFoundException::class,
+        TokenMismatchException::class,
+        ValidationException::class,
     ];
 
     /**
