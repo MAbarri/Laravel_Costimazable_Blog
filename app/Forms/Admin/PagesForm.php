@@ -10,12 +10,8 @@ class PagesForm extends AdminForm
     {
         $this
             ->add('language_id', 'choice', [
-                'choices' => $this->data['languages'],
+                'choices' => $this->data,
                 'label' => trans('admin.fields.page.language_id')
-            ])
-            ->add('parent_id', 'choice', [
-                'choices' => $this->data['pages'],
-                'label' => trans('admin.fields.page.parent_id')
             ])
             ->add('title', 'text', [
                 'label' => trans('admin.fields.page.title')

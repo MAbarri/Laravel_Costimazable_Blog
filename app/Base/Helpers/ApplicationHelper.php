@@ -38,7 +38,8 @@ if (!function_exists('renderMenuNode')) {
         $sub_drop_down = '<a href="#" class="dropdown-toggle " data-toggle="dropdown" data-hover="dropdown">'
                           . $node->title . '&nbsp;</a>';
         $single  = '<a class="navbar-mobile-link-hide" href="'. $link .'">' . $node->title . '</a>';
-
+        $html="";
+        if($node->active){
         if ($node->isLeaf()) {
             return '<li>' . $single . '</li>';
         } else {
@@ -60,6 +61,7 @@ if (!function_exists('renderMenuNode')) {
             $html .= '</ul>';
             $html .= '</li>';
           }
+        }
         }
         return $html;
     }

@@ -10,7 +10,7 @@ class SlidesForm extends AdminForm
     {
         $this
             ->add('language_id', 'choice', [
-                'choices' => $this->data['languages'],
+                'choices' => $this->data,
                 'label' => trans('admin.fields.slide.language_id')
             ])
             ->add('title', 'text', [
