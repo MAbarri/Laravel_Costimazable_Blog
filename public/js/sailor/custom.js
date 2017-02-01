@@ -2,19 +2,20 @@
 jQuery(document).ready(function($) {
 "use strict";
 
+
 function fixNavbarOnMobile (){
     if(!$( "header .dropdown" ).hasClass( "open" )){
       $('header .dropdown-menu').addClass( "hidden-xs" );
     }
-    $('.navbar-toggle').on('click', function(){
-      $('.dropdown-menu').addClass('hidden-xs');
+    $('header .navbar-toggle').on('click', function(){
+      $('header .dropdown-menu').addClass('hidden-xs');
     })
     $('.navbar-mobile-link-hide').on('click', function(){
       var $this = $(this)
       $this.parents('.dropdown-menu').addClass('hidden-xs');
     })
     $('.dropdown .dropdown-toggle').on('click', function(e) {
-      var $this = $(this)
+      var $this   = $(this)
       if($this.is('a')){
         $this = $this.parent('li');
       }
@@ -47,6 +48,7 @@ function fixNavbarOnMobile (){
   if ($(window).width() <= 767){
     fixNavbarOnMobile();
   }
+
     $('li.chosen-one').click(function(){
         $('input[name="language"]').val($(this.childNodes[0].firstChild).attr("alt"));
         $('#language-form-changer').submit();
