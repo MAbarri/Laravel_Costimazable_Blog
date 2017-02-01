@@ -34,6 +34,7 @@ return [
         "fail"                      => "Create operation on resource has failed.",
         "success"                   => "Resource has been created succesfully."
     ],
+    "page_parent_error"             => "Error while editing the page, if you are trying to change the parent of this page, make sure you don't select a child of this same page as a parent to it.",
     "csrf_error"                    => "Seems like you couldn't submit the form for a longtime. Please try again.",
     "datatables" => [               // DataTables, files can be found @ https://datatables.net/plug-ins/i18n/
         "sInfo"                     => "Showing _START_ to _END_ of _TOTAL_ entries",
