@@ -1,3 +1,7 @@
 * text=auto
 *.css linguist-vendored
 *.less linguist-vendored
+*.less linguist-vendored
+public/packages/* linguist-vendored
+public/js/* linguist-vendored
+uploads/* linguist-vendored
